@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Nav from "./navigation/Nav";
-import { Home, Cart, Contact, Products, About } from "../src/Components/Index";
-
+import "./App.css";
+import { Cart, Contact, Home, Product, About } from "./Components/index";
 function App() {
   return (
     <>
@@ -10,10 +9,10 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Products />} />
-          <Route path="/" element={<Contact />} />
-          <Route path="/" element={<About />} />
-          <Route path="/" element={<Cart />} />
+          <Route path="/Products" element={<Product />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
     </>
